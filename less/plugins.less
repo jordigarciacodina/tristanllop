@@ -1,0 +1,376 @@
+// Plugins
+
+/* Easy Digital Downloads
+--------------------------------------------- */
+
+/* Checkout */
+
+#edd_checkout_user_info legend,
+#edd_cc_fields legend,
+body.edd-checkout #edd_checkout_cart thead,
+.eddr-cart-item-notice,
+.edd-label,
+.edd-description,
+#edd_final_total_wrap,
+#edd-last-name-wrap,
+#edd_purchase_receipt_products,
+.edd-logged-out,
+#edd-login-account-wrap,
+.edd-success h3,
+#edd_secure_site_wrapper {
+	display: none !important;
+}
+
+#edd_checkout_user_info,
+#edd_checkout_login_register,
+#edd_purchase_submit,
+#edd_register_fields,
+#edd_register_account_fields,
+#edd_login_fields,
+#edd-privacy-policy-agreement,
+#edd_profile_personal_fieldset,
+#edd_profile_address_fieldset,
+#edd_profile_password_fieldset,
+#edd_profile_submit_fieldset,
+#edd-stripe-manage-cards fieldset,
+#edd_cc_fields,
+#edd_cc_address,
+#edd_login_form fieldset {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#edd_register_account_fields legend,
+#edd_checkout_user_info legend,
+#edd_profile_name_label,
+#edd_profile_billing_address_label,
+#edd_profile_password_label,
+#edd-stripe-manage-cards legend,
+#edd_cc_fields legend,
+#edd_cc_address legend,
+#edd_login_form fieldset legend {
+	.font-size(22);
+	font-weight: 700;
+	margin-bottom: 20px !important;
+}
+
+#edd_checkout_wrap {
+	#edd_checkout_cart_form {
+		margin-bottom: 30px;
+		#edd_checkout_cart_wrap {
+			padding: 10px 0;
+			margin-top: 10px;
+			#edd_checkout_cart {
+				margin-bottom: 0;
+				.edd_cart_header_row th {
+					padding: 10px !important;
+				}
+				.edd_cart_item_name,
+				.edd_cart_item_price,
+				.edd_cart_actions,
+				.edd_cart_total {
+					font-weight: 700;
+					background: @background-color;
+					padding: 20px !important;
+					line-height: 1.2;
+					word-break: initial!important;
+				}
+				.edd_cart_total {
+					padding-top: 10px;
+				}
+				.edd_checkout_cart_item_title,
+				.edd_cart_remove_item_btn {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	#edd_checkout_form_wrap {
+		.edd-input {
+			width: 100% !important;
+			padding: 12px !important;
+			background: @background-color!important;
+			width: 100%;
+			&:placeholder {
+				color: @border-color;
+			}
+		}
+		fieldset p {
+			margin-bottom: 20px !important;
+		}
+		#edd_purchase_form {
+			display: flex;
+			flex-direction: column;
+			#edd_checkout_user_info {
+			}
+			#edd_purchase_submit {
+				input[type=checkbox] {
+					width: auto !important;
+				}
+				.edd-submit,
+				#edd-login-account-wrap {
+					margin-top: 30px !important;
+					.common-btn()!important;
+				}
+			}
+		}
+	}
+}
+
+.edd-button,
+.edd_submit,
+.edd-submit { 
+	.common-btn()!important;
+}
+
+/* Confirmation */
+
+#edd_subscription_receipt {
+	display: none !important;
+}
+
+/* Restriction */
+
+.edd-buyers,
+.restrict-wrapper {
+	color: @base-color;
+	background-color: @featured-color;
+	border: 1px solid @featured-color;
+	border-radius: 5px;
+	margin: 10px auto 30px auto;
+	padding: 30px;
+	text-align: center;
+	max-width: @template-max-width;
+	.dashicons-lock {
+		.font-size(40);
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	p {
+		display: block;
+		margin-bottom: 0;
+	}
+	a {
+		font-weight: 700;
+		color: @base-color;
+	}
+}
+
+.blog .edd_cr_message,
+.archive .edd_cr_message,
+.single-portfolio .edd_cr_message {
+	display: none !important;
+}
+
+/* Mi cuenta */
+
+#edd_profile_editor_form {
+	input,
+	select {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	p {
+		margin-bottom: 0 !important;
+	}
+	#edd_profile_display_name_wrap {
+		display: none!important;
+	}
+	#edd_profile_editor_submit {
+		width: auto !important;
+		font-weight: 700!important;
+		.font-size(18)!important;
+	}
+}
+
+#edd-stripe-manage-cards .edd-stripe-card-item {
+	border: none !important;
+	padding: 0 !important;
+}
+
+/* Modificar Tarjeta */
+
+#edd_checkout_form_wrap fieldset#edd_cc_fields {
+	background-color: @base-color!important;
+}
+
+.edd-stripe-card-radio-item,
+.edd-stripe-card-selector {
+	background-color: @background-color!important;
+}
+
+.new-card-wrapper {
+	margin-bottom: 30px !important;
+}
+
+.card-expiration {
+	display: initial !important;
+}
+
+@media only screen and (max-width: 960px) {
+	#edd_user_history {
+		thead,
+		tr,
+		th,
+		td {
+			display: block !important;
+		}
+	}
+}
+
+/* Añadir tarjeta */
+
+.card-update-form {
+	margin-top: 20px;
+	.card-address-fields {
+		margin-top: 20px !important;
+		input {
+			width: 100% !important;
+		}
+	}
+	.card-expiration-fields {
+		display: flex !important;
+	}
+}
+
+/* Download Monitor
+--------------------------------------------- */
+
+.dlm-downloads {
+	padding: 0!important;
+	li {
+		list-style-type: none!important;
+		padding: 15px 0!important;
+	}
+	.download-link {
+		display: block;
+		padding: 30px;
+		text-align: center;
+		background: @base-color;
+		border: 1px solid @featured-color;
+	}
+}
+
+.download-wrapper {
+	max-width: 100%;
+	margin-bottom: 30px;
+	border: 1px solid @featured-color;
+	a {
+		height: 100%;
+		width: 100%;
+		color: @primary-color;
+		text-decoration: none;
+		.download-text {
+			padding: 30px;
+			.dashicons-download {
+				font-size: 30px;
+				margin-right: 10px;
+			}
+			.download-title {
+				color: @featured-color;
+			}
+		}
+	}
+}
+
+/* Genesis Login Modal Box
+--------------------------------------------- */
+
+.remodal {
+	max-width: 400px !important;
+	border-radius: 5px;
+	label[for="log"],
+	label[for="pwd"],
+	.login-remember label {
+		font-weight: 300;
+	}
+	input[type="text"],
+	input[type="password"] {
+		width: 100% !important;
+		background: @background-color;
+	}
+	.remodal-close {
+		background: transparent!important;
+		color: @primary-color!important;
+		border: none!Important;
+		padding: 0 30px!important;
+	}
+}
+
+.signin-title {
+	.font-size(30)!important;
+}
+
+.login-submit {
+	float: none !important;
+	input[type=submit] {
+		width: 100% !important;
+	}
+}
+
+/* WP Forms
+--------------------------------------------- */
+
+.contact-form {
+	margin-bottom: 0 !important;
+	.wpforms-field {
+		padding: 10px 0 !important;
+	}
+	.wpforms-field-label {
+		.font-size(18)!important;
+		margin-bottom: 15px !important;
+	}
+	input,
+	select,
+	textarea {
+		background: @background-color!important;
+		border: none !important;
+		.font-size(18)!important;
+		&::placeholder {
+			color: @placeholder-color;
+		}
+	}
+	textarea {
+		min-height: 150px !important;
+	}
+	button {
+		.common-btn()!important;
+	}
+}
+
+.wpforms-confirmation-container-full {
+	background-color: @featured-color!important;
+	border: none !important;
+	margin-bottom: 0 !important;
+	padding: 10px 0 0 !important;
+}
+
+.privacy-text,
+.legal-text {
+	.font-size(13);
+	color: @border-color;
+	text-align: justify;
+}
+
+/* Mailchimp Form
+--------------------------------------------- */
+
+#mc_embed_signup {
+	form {
+		padding: 0!important;
+	}
+	.button {
+		.common-btn()!important;
+		height: auto!important;
+		width: 100%!important;
+	}
+}
+
+/* Genesis Blocks
+--------------------------------------------- */
+
+.gb-block-button a {
+	.common-btn()!important;
+}
