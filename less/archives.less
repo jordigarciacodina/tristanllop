@@ -1,5 +1,11 @@
 // Archives
 
+.blog .content,
+.archive .content,
+.search .content {
+	width: 100%;
+}
+
 .blog .posts-wrapper,
 .archive .posts-wrapper,
 .search .posts-wrapper {
@@ -11,13 +17,64 @@
 		}
 		.entry-content {
 			.entry-title {
-				.font-size(22);
+				.font-size(24);
 				text-align: left;
+				a {
+					color: @headings-color;
+				}
 			}
 			p {
 				margin: 0;
+				display: none;
 			}
 		}
 	}
 }
 
+/* Podcast */
+
+.post-type-archive-podcast .podcast {
+	padding: 20px;
+	border: 1px solid @featured-color;
+	p {
+		display: inherit!important;
+	}
+}
+
+/* Directo */
+
+.page-id-119 .content {
+	width: 100%;
+	.posts-loop {
+		.section-title {
+			text-align: center;
+			.font-size(30);
+		}
+		a {
+			text-decoration: none;
+			.entry-header {
+				margin-bottom: 20px;
+			}
+			.entry-title {
+				text-align: left!important;
+				.font-size(24);
+			}
+		}
+	}
+}
+
+/* Coaching */
+
+.page-id-157 {
+	.edd_cr_message {
+		display: none;
+	}
+	.contact-form {
+		max-width: @template-max-width;
+		margin: 0 auto;
+	}
+}
+
+.page-id-157.logged-in .edd_cr_message {
+	display: inherit;
+}

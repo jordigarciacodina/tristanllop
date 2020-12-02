@@ -464,7 +464,10 @@ function genesis_starter_front_page_content_customize($wp_customize){
 		'description' => __('Personaliza la sección Contenido', 'genesis-starter'),
 		'priority' => 60
 	));
-	
+
+
+
+
 	// Cursos Content Title Text
 	$wp_customize->add_setting('cursos_content_title',
 		array(
@@ -518,6 +521,11 @@ function genesis_starter_front_page_content_customize($wp_customize){
 			'sanitize_callback' => 'sanitize_text'
 	));
 
+
+
+
+
+
 	// Directos Content Title Text
 	$wp_customize->add_setting('directos_content_title',
 		array(
@@ -556,7 +564,7 @@ function genesis_starter_front_page_content_customize($wp_customize){
 
 	// Directos Content CTA Link
 	$wp_customize->add_setting(
-		'Directos_content_cta_link',
+		'directos_content_cta_link',
 		array(
 			'default' => home_url('/registro'),
 			'type' => 'theme_mod'

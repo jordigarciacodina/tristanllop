@@ -71,7 +71,8 @@ body.edd-checkout #edd_checkout_cart thead,
 				.edd_cart_actions,
 				.edd_cart_total {
 					font-weight: 700;
-					background: @background-color;
+					background: @base-color;
+					border: 1px solid @featured-color;
 					padding: 20px !important;
 					line-height: 1.2;
 					word-break: initial!important;
@@ -91,7 +92,8 @@ body.edd-checkout #edd_checkout_cart thead,
 		.edd-input {
 			width: 100% !important;
 			padding: 12px !important;
-			background: @background-color!important;
+			background: @base-color!important;
+			border: 1px solid @featured-color!important;
 			width: 100%;
 			&:placeholder {
 				color: @border-color;
@@ -281,6 +283,10 @@ body.edd-checkout #edd_checkout_cart thead,
 .remodal {
 	max-width: 400px !important;
 	border-radius: 5px;
+	.signin-title {
+		color: @headings-color;
+		font-weight: 700;
+	}
 	label[for="log"],
 	label[for="pwd"],
 	.login-remember label {
@@ -289,7 +295,8 @@ body.edd-checkout #edd_checkout_cart thead,
 	input[type="text"],
 	input[type="password"] {
 		width: 100% !important;
-		background: @background-color;
+		background: @base-color;
+		border: 1px solid @featured-color;
 	}
 	.remodal-close {
 		background: transparent!important;
@@ -325,8 +332,8 @@ body.edd-checkout #edd_checkout_cart thead,
 	input,
 	select,
 	textarea {
-		background: @background-color!important;
-		border: none !important;
+		background: @base-color!important;
+		border: 1px solid @featured-color!important;
 		.font-size(18)!important;
 		&::placeholder {
 			color: @placeholder-color;
@@ -373,4 +380,296 @@ body.edd-checkout #edd_checkout_cart thead,
 
 .gb-block-button a {
 	.common-btn()!important;
+}
+
+/* Sensei LMS
+--------------------------------------------- */
+
+/* Defaults */
+
+.course div.sensei-message.info, 
+.course p.sensei-message.info, 
+.course-container div.sensei-message.info, 
+.course-container p.sensei-message.info, 
+.learner-info div.sensei-message.info, 
+.learner-info p.sensei-message.info, 
+.lesson div.sensei-message.info, 
+.lesson p.sensei-message.info, 
+.quiz div.sensei-message.info, 
+.quiz p.sensei-message.info, 
+.sensei div.sensei-message.info, 
+.sensei p.sensei-message.info {
+	background: @featured-color!important;
+	color: @base-color!important;
+}
+
+.course #commentform #submit, 
+.course .submit,
+.course a.button, 
+.course a.button:visited, 
+.course a.comment-reply-link, 
+.course button.button, 
+.course input.button, 
+.course input[type=submit], 
+.course-container #commentform #submit, 
+.course-container .submit, 
+.course-container a.button, 
+.course-container a.button:visited, 
+.course-container a.comment-reply-link, 
+.course-container button.button, 
+.course-container input.button, 
+.course-container input[type=submit], 
+.quiz #commentform #submit, 
+.quiz .submit, .quiz a.button, 
+.quiz a.button:visited, 
+.quiz a.comment-reply-link, 
+.quiz button.button, 
+.quiz input.button, 
+.quiz input[type=submit],
+.lesson input.quiz-submit.complete, 
+.quiz input.quiz-submit.complete,
+.course #commentform #submit, 
+.course .submit, 
+.course a.button, 
+.course a.button:visited, 
+.course a.comment-reply-link, 
+.course button.button, 
+.course input.button, 
+.course input[type=submit], 
+.course-container #commentform #submit, 
+.course-container .submit, 
+.course-container a.button, 
+.course-container a.button:visited, 
+.course-container a.comment-reply-link, 
+.course-container button.button, 
+.course-container input.button, 
+.course-container input[type=submit], 
+.lesson #commentform #submit, 
+.lesson .submit, .lesson a.button, 
+.lesson a.button:visited, .lesson a.comment-reply-link, 
+.lesson button.button, .lesson input.button, 
+.lesson input[type=submit], .quiz #commentform #submit, 
+.quiz .submit, .quiz a.button, .quiz a.button:visited, 
+.quiz a.comment-reply-link, .quiz button.button, 
+.quiz input.button, .quiz input[type=submit]{
+	.common-btn()!important;
+	text-transform: capitalize!important;
+}
+
+
+.course-container .status.completed, 
+.course-lessons .status.completed, 
+.course .status.completed {
+	.common-btn()!important;
+	text-transform: capitalize!important;
+	background-color: @featured-color!important;
+}
+
+/* Single course */
+
+.modules-title {
+	display: none!important;
+}
+
+.course-enrolment {
+	text-align: center!important;;
+}
+
+.course,
+.course, .course-container, 
+.course-container .course {
+	border-bottom: none!important;
+}
+
+.course {
+	.in-progress,
+	.meter.orange>span,
+	.meter.red>span,
+	.meter .value {
+		background: @featured-color!important;
+	}
+	.module {
+		header,
+		.module-description {
+			background-color: transparent!important;
+			padding: 0!important;
+		}
+		margin: 0!important;
+		.module-lessons header,
+		.module-lessons ul li a {
+			border-top: none!important;
+			border-bottom: none!important;
+			background: transparent!important;
+		}
+		.module-lessons h3 {
+			display: none!important;
+		}
+	}
+	.post-entries {
+		display: none;
+	}
+}
+
+.course-lessons {
+	margin-top: 30px!important;
+	.lesson {
+		padding-bottom: 0!important;
+		margin-bottom: 10px!important;
+		.lesson-title {
+			h2 {
+				.font-size(22)!important;
+				a {
+					text-decoration: none!important;
+					color: @headings-color!important;
+				}
+			}
+			.lesson-meta {
+				display: none!important;
+			}
+		}
+		.entry {
+			display: none!important;
+		}
+	}
+}
+
+/* Single Lesson */
+
+.sensei-message {
+	background-color: @background-color!important;
+}
+
+.lesson {
+	.lesson-meta {
+		margin: 0!important
+	}
+	footer {
+		input[type="submit"] {
+			background-color: @featured-color!important;
+		}
+	}
+}
+
+#post-entries .nav-next {
+	margin-bottom: 30px!important;
+}
+
+.sensei-breadcrumb {
+	padding: 30px!important;
+}
+
+/* Quizzes */
+
+.quiz-template-default .content {
+	max-width: 900px!important;
+	.sensei-message {
+		padding: 30px;
+		.next-lesson {
+			.common-btn()!important;
+			transform: translateY(-14px)!important;
+			text-transform: none!important;
+		}
+	}
+}
+
+.quiz {
+	margin-bottom: 60px!important;
+	input.quiz-submit.complete {
+		background-color: @featured-color!important;
+	}
+}
+
+/* Mis cursos */
+
+.page-id-79 .content { 
+	max-width: 1200px!important;
+	#user-course-status-toggle {
+		.flex();
+		justify-content: center!important;
+		text-align: center;
+		margin: 30px 0;
+		width: 100%;
+		border-bottom: none!important;
+		a:first-of-type {
+			display: none!important;
+		}
+		#sensei-user-courses-all-action {
+			background-color: @base-color;
+			border-top: 1px solid @featured-color;
+			border-left: 1px solid @featured-color;
+			border-right: 1px solid @featured-color;
+			border-bottom: 1px solid @featured-color;
+			padding: 12px 30px;
+			text-decoration: none!important;
+			color: @featured-color;
+			flex-grow: 1!important;
+			&:hover,
+			&:focus {
+				background-color: @featured-color!important;
+				color: @base-color!important;
+			}
+		}
+		a.active {
+			background: @featured-color!important;
+			background-color: @featured-color!important;
+			border-bottom: none!important;
+			color: @base-color!important;
+		}
+	}
+	.course-container {
+		a img {
+			display: none!important;
+		}
+		.course-title {
+			order: -1!important;
+			a {
+				box-shadow: none!important;
+				padding: 0!important;
+				text-align: left!important;
+			}
+		}
+	}
+
+}
+
+/* Categorías */
+
+.sensei-category-title {
+	display: none!important;
+}
+
+.course-container {
+	margin-bottom: 0!important;
+	padding-left: 0!important;
+	display: flex;
+	flex-direction: column;
+	.course {
+		padding: 0!important;
+		float: none!important;
+		.entry {
+			display: flex!important;
+			flex-direction: column;
+			margin-bottom: 0!important;
+			.sensei-course-meta,
+			.course-excerpt {
+				display: none!important;
+			}
+			.course-title {
+				order: 2;
+				text-align: center!important;
+				a {
+					.font-size(22)!important;
+					box-shadow: 3px 3px 10px #BBBBBB29;
+					text-decoration: none!important;
+					padding: 20px;
+					display: block!important;
+					color: @headings-color!important;
+				}
+			}
+			img {
+				width: 100%!important;
+				margin: 0!important;
+			}
+		}	
+	}
 }

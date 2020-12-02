@@ -247,6 +247,17 @@ function bs_comment_textarea_placeholder($args) {
 // Enable shortcodes in text widgets
 add_filter('widget_text', 'do_shortcode');
 
+// Add Genesis Footer Widget Areas
+add_theme_support( 'genesis-footer-widgets', 4 );
+	
+// Remove Genesis Footer Widget Areas from Front Page
+add_action( 'genesis_before_footer', 'bs_remove_footer_widgets', 4 );
+function bs_remove_footer_widgets() {
+	if ( is_front_page() || is_page_template(array('page-templates/landing.php', 'page-templates/checkout.php'))) {	
+		remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
+	}
+}
+
 // Custom Blog & Archives template
 add_action('genesis_before_while', 'bs_add_costumize_archive_templates');
 function bs_add_costumize_archive_templates() {

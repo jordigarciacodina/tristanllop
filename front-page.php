@@ -121,7 +121,7 @@ function bs_display_front_page_sections() {
 					
 				</div>
 				<div class="more-content">
-					<a href="<?php echo get_theme_mod( 'cursos_content_cta_link'); ?>"><?php echo get_theme_mod('cursos_content_cta_text'); ?></a>
+					<a href="<?php echo get_theme_mod( 'cursos_content_cta_link'); ?>">VER MÁS CURSOS</a>
 				</div>
 			</div>
 			<div class="last-content">
@@ -200,6 +200,7 @@ function bs_display_front_page_sections() {
 			</div>
 		</div>
 	</section>
+	<?php if (!bs_has_user_purchased_specific_product()): ?>
 	<section class="testimonials">
 		<div class="wrap">
 			<h2><?php echo get_theme_mod('testimonios_content_title'); ?></h2>
@@ -236,7 +237,6 @@ function bs_display_front_page_sections() {
 			</div>
 		</div>
 	</section>
-    <?php if (!bs_has_user_purchased_specific_product()): ?>
 	<section class="hero banner-bottom">
 		<div class="wrap">
 			<div class="box">
