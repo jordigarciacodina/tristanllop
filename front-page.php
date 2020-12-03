@@ -237,39 +237,10 @@ function bs_display_front_page_sections() {
 			</div>
 		</div>
 	</section>
-	<section class="hero banner-bottom">
-		<div class="wrap">
-			<div class="box">
-				<h1><?php echo get_theme_mod('hero_title'); ?></h1>
-				<p><?php echo get_theme_mod('hero_description'); ?></p>
-				<div class="benefits">
-					<div class="benefit">
-						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-						<p><?php echo get_theme_mod('hero_benefit_1_text'); ?></p>
-					</div>
-					<div class="benefit">
-						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-						<p><?php echo get_theme_mod('hero_benefit_2_text'); ?></p>
-					</div>
-					<div class="benefit">
-						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-						<p><?php echo get_theme_mod('hero_benefit_3_text'); ?></p>
-					</div>
-					<div class="benefit">
-						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
-						<p><?php echo get_theme_mod('hero_benefit_4_text'); ?></p>
-					</div>
-				</div>
-				<div class="cta">
-					<button class="primary" onclick="window.location.href='<?php echo get_theme_mod('hero_primary_cta_link'); ?>'"><?php echo get_theme_mod('hero_primary_cta_text'); ?></button>
-				</div>
-			</div>
-		</div>
-	</section> 
 	<?php else: ?>
 
-	<?php endif;
+	<?php endif; ?>
 
-}
+<?php }
 
 genesis();

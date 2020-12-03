@@ -31,11 +31,41 @@
 	}
 }
 
+/* Testimonios */
+
+.post-type-archive-testimonio .testimonio {
+
+	p {
+		display: inherit!important;
+	}
+}
+
+/* Cursos */
+
+.page-id-78 .course-container {
+	.flex();
+	flex-direction: column;
+	.course {
+		img {
+			padding-bottom: 20px!important;
+		}
+		.course-title {
+			text-align: left!important;
+			a {
+				padding: 0!important;
+				box-shadow: none!important;
+			}
+		}
+	}
+
+}
+
 /* Podcast */
 
 .post-type-archive-podcast .podcast {
 	padding: 20px;
 	border: 1px solid @featured-color;
+	border-radius: 10px;
 	p {
 		display: inherit!important;
 	}

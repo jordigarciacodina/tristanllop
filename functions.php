@@ -304,3 +304,42 @@ function bs_add_costumize_single_templates() {
 			
     endif;
 }
+
+// Display Membership CTA Section
+add_action('genesis_before_footer','bs_display_membership_cta_section', 5);
+function bs_display_membership_cta_section() { 
+	if(!is_page_template(array('page-templates/landing.php', 'page-templates/checkout.php')) && !bs_has_user_purchased_specific_product() ) : ?>
+	<section class="hero banner-bottom">
+		<div class="wrap">
+			<div class="box">
+				<h1><?php echo get_theme_mod('hero_title'); ?></h1>
+				<p><?php echo get_theme_mod('hero_description'); ?></p>
+				<div class="benefits">
+					<div class="benefit">
+						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
+						<p><?php echo get_theme_mod('hero_benefit_1_text'); ?></p>
+					</div>
+					<div class="benefit">
+						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
+						<p><?php echo get_theme_mod('hero_benefit_2_text'); ?></p>
+					</div>
+					<div class="benefit">
+						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
+						<p><?php echo get_theme_mod('hero_benefit_3_text'); ?></p>
+					</div>
+					<div class="benefit">
+						<i class=" <?php echo get_theme_mod('hero_benefit_1_icon'); ?>" aria-hidden="true"></i>
+						<p><?php echo get_theme_mod('hero_benefit_4_text'); ?></p>
+					</div>
+				</div>
+				<div class="cta">
+					<button class="primary" onclick="window.location.href='<?php echo get_theme_mod('hero_primary_cta_link'); ?>'"><?php echo get_theme_mod('hero_primary_cta_text'); ?></button>
+				</div>
+			</div>
+		</div>
+	</section> 
+	<?php else: ?>
+
+	<?php endif;
+
+}
