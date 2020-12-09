@@ -253,7 +253,7 @@ add_theme_support( 'genesis-footer-widgets', 4 );
 // Remove Genesis Footer Widget Areas from Front Page
 add_action( 'genesis_before_footer', 'bs_remove_footer_widgets', 4 );
 function bs_remove_footer_widgets() {
-	if ( is_front_page() || is_page_template(array('page-templates/landing.php', 'page-templates/checkout.php'))) {	
+	if ( is_page_template(array('page-templates/landing.php', 'page-templates/checkout.php'))) {	
 		remove_action( 'genesis_before_footer', 'genesis_footer_widget_areas' );
 	}
 }

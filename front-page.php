@@ -124,7 +124,7 @@ function bs_display_front_page_sections() {
 					<a href="<?php echo get_theme_mod( 'cursos_content_cta_link'); ?>">VER MÁS CURSOS</a>
 				</div>
 			</div>
-			<div class="last-content">
+			<!-- <div class="last-content">
 			<h2><?php echo get_theme_mod('directos_content_title'); ?></h2>
 				<div class="posts-wrapper directos"> <?php
 				
@@ -156,8 +156,8 @@ function bs_display_front_page_sections() {
 
 				wp_reset_postdata(); ?>
 					
-				</div>
-				<div class="more-content">
+				</div> -->
+				<!-- <div class="more-content">
 					<a href="<?php echo get_theme_mod( 'directos_content_cta_link'); ?>"><?php echo get_theme_mod('directos_content_cta_text'); ?></a>
 				</div>
 			</div>
@@ -197,7 +197,7 @@ function bs_display_front_page_sections() {
 				<div class="more-content">
 					<a href="<?php echo get_theme_mod( 'extras_content_cta_link'); ?>"><?php echo get_theme_mod('extras_content_cta_text'); ?></a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<?php if (!bs_has_user_purchased_specific_product()): ?>
