@@ -55,6 +55,29 @@ body.edd-checkout #edd_checkout_cart thead,
 	margin-bottom: 20px !important;
 }
 
+#edd_discount_code {
+	margin-bottom: 0!important;
+}
+
+#edd_show_discount,
+#edd-discount-code-wrap {
+	padding: 0!important;
+    background: transparent!important;
+    margin-bottom: 0!important;
+	border: 0!important;
+	.edd-discount-code-field-wrap {
+		display: flex!important;
+		flex-flow: row nowrap!important;
+		justify-content: space-between!important;
+		#edd-discount {
+			margin-right: 10px;
+		}
+		.edd-apply-discount {
+			.inverse-btn(@featured-color)!important;
+		}
+	}
+}
+
 #edd_checkout_wrap {
 	#edd_checkout_cart_form {
 		margin-bottom: 30px;
@@ -69,7 +92,8 @@ body.edd-checkout #edd_checkout_cart thead,
 				.edd_cart_item_name,
 				.edd_cart_item_price,
 				.edd_cart_actions,
-				.edd_cart_total {
+				.edd_cart_total,
+				.edd_cart_discount {
 					font-weight: 700;
 					background: @base-color;
 					border: 1px solid @featured-color;
